@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+html, body, #root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: 'VT323', monospace;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mc-text { text-shadow: 2px 2px 0 #3f3f3f; color: #fff; }
+.mc-text-dark { text-shadow: 2px 2px 0 #000; }
+
+.mc-btn {
+  background: #6f6f6f;
+  border: 2px solid #000;
+  box-shadow: inset -2px -3px 0 #3f3f3f, inset 2px 2px 0 #a8a8a8;
+  color: #e0e0e0;
+  text-shadow: 2px 2px 0 #383838;
+  font-size: 22px;
+  padding: 6px 12px;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+.mc-btn:hover { background: #7e89c7; box-shadow: inset -2px -3px 0 #4a5389, inset 2px 2px 0 #b8c0f0; color: #ffffa0; }
+.mc-btn:disabled { background: #2c2c2c; color: #7a7a7a; box-shadow: none; cursor: default; }
+
+.mc-panel {
+  background: #c6c6c6;
+  border: 2px solid #000;
+  box-shadow: inset 3px 3px 0 #fff, inset -3px -3px 0 #555;
+  border-radius: 4px;
+}
+.mc-slot {
+  background: #8b8b8b;
+  box-shadow: inset 2px 2px 0 #373737, inset -2px -2px 0 #fff;
+  position: relative;
+}
+.mc-slot:hover { background: #a9a9a9; }
+.mc-input {
+  background: #000;
+  border: 2px solid #a0a0a0;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  padding: 4px 8px;
+  outline: none;
+}
+.mc-input:focus { border-color: #fff; }
+.pixel { image-rendering: pixelated; }
+
+.dirt-bg {
+  background-color: #3b2a1d;
+  background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    repeating-conic-gradient(#6b4a32 0% 25%, #5a3d29 0% 50%);
+  background-size: auto, 32px 32px;
+}
+
+@keyframes splash { 0%,100% { transform: rotate(-20deg) scale(1); } 50% { transform: rotate(-20deg) scale(1.08); } }
+.splash { animation: splash 0.6s ease-in-out infinite; }
+@keyframes fadeout { 0% { opacity: 1 } 70% { opacity: 1 } 100% { opacity: 0 } }
+.fade-name { animation: fadeout 2s forwards; }
